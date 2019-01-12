@@ -12,10 +12,16 @@ theme_set(theme_bw())
 
 # IMPORTACION DE DATOS ----------------------------------------------------
 
-movimientos <- read_csv('datos/movimientos_tarjetas_black.csv')
+movimientos <- read_csv("datos/movimientos_tarjetas_black.csv", 
+                        col_types = cols(TARJETA = col_character()))
 
 min(movimientos$FECHA); max(movimientos$FECHA)
 
+titulares <- read_delim('datos/titulares_tarjetas_black.csv', delim = "#", col_types = cols(TARJETA = col_character()))
+
+
+movimientos <- movimientos %>% 
+  left_join(titulares) 
 
 # EJERCICIO 1 -------------------------------------------------------------
 

@@ -12,10 +12,12 @@ theme_set(theme_bw())
 
 # IMPORTACION DE DATOS ----------------------------------------------------
 
-movimientos <- read_csv('datos/movimientos_tarjetas_black.csv')
+movimientos <- 
+
 
 min(movimientos$FECHA); max(movimientos$FECHA)
 
+titulares <-
 
 # EJERCICIO 1 -------------------------------------------------------------
 
