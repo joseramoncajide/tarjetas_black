@@ -64,7 +64,7 @@ movimientos %>%
 # Calcula la media y la mediana de todos los importes exceptos de los que son abonos.
 
 movimientos %>% 
-  filter(COD_OPERACION == 400 )
+  filter(!COD_OPERACION == 400 )
 
 movimientos %>% 
   filter(!COD_OPERACION == 400 ) %>% 
